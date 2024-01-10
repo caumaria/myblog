@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Hero from "./components/hero/Hero";
 
 export default function Home() {
   const [message, setMessage] = useState("Loading");
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <div>
       <h1>{message}</h1>
+      <Hero />
     </div>
   );
 }
