@@ -3,11 +3,11 @@ import React from "react";
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
-  color: var(--lettering);
   font-family: "Cedarville Cursive", cursive;
   font-size: 2.2rem;
   a {
     text-decoration: none;
+    color: var(--lettering);
   }
 `;
 

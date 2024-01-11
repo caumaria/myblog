@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Food & Health Blog</title>        
+        <title>Food & Health Blog</title>
         <link rel="icon" type="image/x-icon" href="/icon32.png"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -19,12 +19,18 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
           rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+          rel="stylesheet"
+        ></link>
       </head>
       <body>
         <StyledComponentsRegistry>
           <Navbar />
           {children}
-          </StyledComponentsRegistry>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
