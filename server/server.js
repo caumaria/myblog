@@ -23,24 +23,33 @@ con.connect(function(err) {
 
 //
 
-async function getPosts() {
+export async function getPosts() {
     const [rows] = await con.promise().query("SELECT * FROM posts");
     return rows;
 }
 
-async function getPost(id) {
+export async function getPost(id) {
     const [rows] = await con.promise().query("SELECT * FROM posts WHERE id = ?", [id]);
-    return rows;
+    return rows[0];
 }
 
-async function fetchData() {
+export async function fetchData() {
     const posts = await getPosts();
     console.log(posts);
-
-    //const singlePost = await getPost(1);
 }
 
-fetchData();
+//fetchData();
+
+export async function createPost(id, title, post_text, date) {
+    const [result] = await con.promise().query("INSERT INTO posts (id, title, post_text, date) VALUES (?,?,?,?)", [id, title, post_text, date]);
+    const idRes = result.insertId;
+    return getPost(idRes);
+}
+
+/*(async () => {
+    const result = await createPost("3", "Receita de Suco Verde", "text test", "2024-01-18");
+    console.log(result);
+})(); */
 
 
 app.get("/api/home", (req, res) => {
