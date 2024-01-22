@@ -9,6 +9,8 @@ const NavbarContainer = styled.nav`
   align-items: center;
   padding: .8rem 4rem;
   border-bottom: 1px solid #2c2c2c14;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
 
   @media (max-width: 768px) {
     display: block;

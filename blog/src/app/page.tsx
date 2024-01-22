@@ -15,8 +15,8 @@ export default function Home() {
 
   return (
     <div>
-      <h1>{message}</h1>
       <Hero />
+      <h1>{message}</h1>
     </div>
   );
 }
