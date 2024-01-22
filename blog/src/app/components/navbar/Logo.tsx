@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const LogoContainer = styled.div`
   font-family: "Cedarville Cursive", cursive;
-  font-size: 2.2rem;
+  font-size: 3rem;
   a {
     text-decoration: none;
     color: var(--lettering);
