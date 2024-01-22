@@ -32,6 +32,10 @@ const HeroContainer = styled.div`
     }
     img {
       max-width: 340px;
+      &:hover {
+        filter: brightness(1.2);
+        transition: 0.3s;
+      }
     }
     h6 {
       font-size: 1.3rem;

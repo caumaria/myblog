@@ -8,8 +8,6 @@ const mySQL = require('mysql2');
 
 app.use(cors());
 
-console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
-
 const con = mySQL.createConnection({
     user: "root",
     host: "localhost",
