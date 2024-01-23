@@ -1,14 +1,19 @@
 //backend api
-require('dotenv').config();
-const express = require("express");
+import dotenv from 'dotenv';
+import express from 'express';
+import mysql from 'mysql2';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+const cors = require('cors');
+
 const app = express();
 const PORT = 3001;
-const cors = require("cors");
-const mySQL = require('mysql2');
 
 app.use(cors());
+dotenv.config();
 
-const con = mySQL.createConnection({
+const con = mysql.createConnection({
     user: "root",
     host: "localhost",
     port: 3306,
