@@ -7,8 +7,10 @@ export const PostContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
+  margin: 1rem;
   div {
-    min-width: 400px;
+    min-width: 320px;
+    max-width: 800px;
     width: 100%;
     align-items: center;
     display: flex;

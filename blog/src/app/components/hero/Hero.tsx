@@ -1,6 +1,7 @@
 import React from "react";
 import { foodImgs } from "../../data/data";
 import { HeroContainer } from "./HeroStyle";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -12,7 +13,7 @@ export default function Hero() {
         <section>
           {foodImgs.map((foodImg, i) => (
             <div key={i}>
-              <img src={foodImg.img} alt={foodImg.title} />
+              <Image src={foodImg.img} alt={foodImg.title} width={346} height={346}/>
               <h6>{foodImg.title}</h6>
             </div>
           ))}
