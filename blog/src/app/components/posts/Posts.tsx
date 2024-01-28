@@ -5,7 +5,6 @@ interface PostType {
   id: number;
   title: string;
   post_text: string;
-  date: string;
 }
 interface PostListProps {
   posts: PostType[];
