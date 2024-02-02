@@ -1,8 +1,6 @@
-//backend api
-import dotenv from 'dotenv';
 import express from 'express';
-import mysql from 'mysql2';
 import { createRequire } from 'module';
+import { con } from './connection.js';
 
 const require = createRequire(import.meta.url);
 const cors = require('cors');
@@ -12,20 +10,6 @@ const PORT = 3001;
 app.use(express.json());
 
 app.use(cors());
-dotenv.config();
-
-const con = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    port: 3306,
-    password: process.env.DB_PASSWORD,
-    database: "blog"
-});
-
-con.connect(function(err) {
-    if (err) return console.error('error in connecting:', err);
-    return console.log('connected');
-});
 
 export async function getPosts() {
     const [rows] = await con.promise().query("SELECT * FROM posts");
@@ -60,10 +44,6 @@ app.post("/posts", async (req, res) => {
     res.status(201).send(post);
 })
 
-app.get("/api/home", (req, res) => {
-    res.json({message: "Hello World from the server!"});
-})
-
 app.use((err, req, res, next) => {
     res.status(500).send({'Something broke': err.message});
 })
@@ -72,19 +52,11 @@ app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 })
 
-
-
 /*
 
 (async () => {
     const result = await createPost("1", "Titulo 1", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni et, quos aliquid earum, dolorum quisquam vel assumenda nostrum maxime perferendis veniam ad fugit! Totam natus quos incidunt quas nisi distinctio.", "2024-02-02");
     console.log(result);
-})(); 
-export async function fetchData() {
-    const posts = await getPosts();
-    console.log(posts);
-}
-
-fetchData();
+})();
 
 */
