@@ -47,8 +47,7 @@ Express, a robust Node.js framework, empowers us to effortlessly build APIs and 
 
 2. **Environment Variables:**
    - Create a `.env` file in the root of the project. 
-   - Add the following environment variables:
-   - DB_PASSWORD, DB_USER, DB_PORT, DB_HOST, DB_DATABASE
+   - Add the following environment variables: DB_PASSWORD, DB_USER, DB_PORT, DB_HOST, DB_DATABASE
 
 ### Usage
 
