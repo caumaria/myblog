@@ -72,10 +72,12 @@ app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 })
 
+
+
 /*
 
 (async () => {
-    const result = await createPost("3", "Receita de Suco Verde", "text test", "2024-01-18");
+    const result = await createPost("1", "Titulo 1", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni et, quos aliquid earum, dolorum quisquam vel assumenda nostrum maxime perferendis veniam ad fugit! Totam natus quos incidunt quas nisi distinctio.", "2024-02-02");
     console.log(result);
 })(); 
 export async function fetchData() {
