@@ -13,11 +13,11 @@ Um lugar perfeito para descobrir e explorar receitas deliciosas!
 
 ## ♦️ Stack
 
-**Front-end:** React, Typescript, styled components
+**Front-end:** React, Typescript, styled components,  Next Js
 
-**Back-end:** Node, Express, Next Js
+**Back-end:** Node, Express
 
-**DB:** MySQL
+**SGDB:** MySQL
 
 # 🖥️ Installation
 
